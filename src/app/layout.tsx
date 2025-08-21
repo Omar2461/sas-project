@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import "../app/globals.css";
 
 export const metadata = {
-  title: "My SaaS App",
+  title: "zadvault",
   description: "Enterprise SaaS built with Next.js",
 };
 
