@@ -41,7 +41,7 @@ function Page() {
           </AuthBtn>
         </BtnPar>
         <h1 className="top-30 left-8 absolute font-bold text-3xl text-white">
-          Create an account
+          Enter your account
         </h1>
 
         <div className="mb-10 mt-42">
