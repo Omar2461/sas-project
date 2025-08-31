@@ -6,8 +6,10 @@ import { useLoginStore } from "@/store/login.store";
 import Panel from "@/components/Panel";
 import BtnPar from "@/components/BtnPar";
 
-import { GoPerson } from "react-icons/go";
+import { MdOutlineMail } from "react-icons/md";
 import { GoLock } from "react-icons/go";
+import { IoMdClose } from "react-icons/io";
+
 import Link from "next/link";
 
 function Page() {
@@ -30,17 +32,23 @@ function Page() {
   };
 
   return (
-    <div className="flex justify-center pt-20 min-h-screen bg-[url('/image.png')] bg-cover bg-center">
+    <div className="flex justify-center pt-20 min-h-screen bg-gradient-to-b from-sky-200 to-blue-500">
       <Panel>
         <BtnPar>
           <AuthBtn className="top-1 left-[5px] text-white bg-white/15 ">
             Log in
           </AuthBtn>
           <AuthBtn className="top-1 right-[5px] hover:bg-white/5 ">
-            <Link href="../siginup"> Sign up</Link>
+            <Link href="../signup"> Sign up</Link>
           </AuthBtn>
         </BtnPar>
-        <h1 className="top-30 left-8 absolute font-bold text-3xl text-white">
+
+        <button className="absolute right-8 bg-black/60 text-center w-8.5 h-8 flex pt-1 justify-center text-md rounded-4xl  transition-transform duration-300 ease-in-out hover:rotate-90">
+          <Link href="/">
+            <IoMdClose className="text-xl pt-1" />
+          </Link>
+        </button>
+        <h1 className="top-30 left-8 w-60 absolute font-bold text-2xl md:text-3xl md:w-full text-white">
           Enter your account
         </h1>
 
@@ -52,7 +60,7 @@ function Page() {
                 value={email}
                 placeholder="Enter your email"
               />
-              <GoPerson className="absolute w-5 top-[14px] left-5" />
+              <MdOutlineMail className="absolute w-5 top-[14px] left-1 md:left-5" />
             </div>
 
             <div className="relative">
@@ -62,12 +70,12 @@ function Page() {
                 type="password"
                 placeholder="Enter your password"
               />
-              <GoLock className="absolute w-5 top-[14px] left-5" />
+              <GoLock className="absolute w-5 top-[14px] left-1 md:left-5" />
             </div>
           </form>
           <div className="text-center mt-10">
-            <button className="bg-white/16 text-white w-85 h-12 rounded-2xl cursor-pointer hover:bg-white/25 duration-300 ease-in-out ">
-              Sign in
+            <button className="bg-white/16 text-white w-45 h-12 md:w-85 rounded-2xl cursor-pointer hover:bg-white/25 duration-300 ease-in-out ">
+              Log in
             </button>
           </div>
         </div>

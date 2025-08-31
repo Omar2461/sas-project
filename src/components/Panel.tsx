@@ -8,7 +8,7 @@ type PanelProps = {
 
 function Panel({ children }: PanelProps) {
   return (
-    <div className="bg-black/40 rounded-4xl w-70 md:w-100 md:h-150 relative hover:scale-105 duration-400 ease-in-out">
+    <div className="bg-black/40 rounded-4xl w-90 md:w-100 md:h-150 relative hover:scale-105 duration-400 ease-in-out">
       {children}
     </div>
   );
