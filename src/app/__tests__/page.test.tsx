@@ -1,35 +1,41 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Home from '../page';
+// page.test.tsx
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Home from "../page";
 
-// Mock next/image
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props: any) => {
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
-    return <img {...props} />;
-  },
+jest.mock("../i18n", () => ({}));
+
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({
+    t: (key: string) => key,
+    i18n: { language: "en" },
+  }),
 }));
 
-describe('Home', () => {
+describe("Home", () => {
   beforeEach(() => {
     render(<Home />);
   });
 
-  it('renders the Next.js logo', () => {
-    const logo = screen.getByAltText('Next.js logo');
-    expect(logo).toBeInTheDocument();
+  it("renders at least one main heading (h1)", () => {
+    const headings = screen.getAllByRole("heading", { level: 1 });
+    expect(headings.length).toBeGreaterThan(0);
   });
 
-  it('renders the Vercel deploy button', () => {
-    const deployButton = screen.getByRole('link', { name: /deploy now/i });
-    expect(deployButton).toBeInTheDocument();
-    expect(deployButton).toHaveAttribute('href', expect.stringContaining('vercel.com/new'));
+  it('renders at least one paragraph mentioning "security"', () => {
+    const paragraphs = screen.getAllByText(/security/i);
+    expect(paragraphs.length).toBeGreaterThan(0);
   });
 
-  it('renders the documentation link', () => {
-    const docsLink = screen.getByRole('link', { name: /read our docs/i });
-    expect(docsLink).toBeInTheDocument();
-    expect(docsLink).toHaveAttribute('href', expect.stringContaining('nextjs.org/docs'));
+  it('renders the "Book a Demo" button', () => {
+    const button = screen.getByRole("button", { name: /book a demo/i });
+    expect(button).toBeInTheDocument();
+  });
+
+  it('renders the "Unique features" section heading', () => {
+    const featuresHeading = screen.getByRole("heading", {
+      name: /unique features/i,
+    });
+    expect(featuresHeading).toBeInTheDocument();
   });
 });

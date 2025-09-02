@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import Input from "@/components/Input";
 import AuthBtn from "@/components/AuthBtn";
-import { useLoginStore } from "@/store/login.store";
 import Panel from "@/components/Panel";
 import BtnPar from "@/components/BtnPar";
+import { useLoginStore } from "@/store/login.store";
 
 import { MdOutlineMail } from "react-icons/md";
 import { GoLock } from "react-icons/go";
@@ -13,6 +15,8 @@ import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 
 function Page() {
+  const { t } = useTranslation();
+
   const {
     login: { email, password },
     handleEmailChange,
@@ -36,20 +40,20 @@ function Page() {
       <Panel>
         <BtnPar>
           <AuthBtn className="top-1 left-[5px] text-white bg-white/15 ">
-            Log in
+            {t("Log in")}
           </AuthBtn>
           <AuthBtn className="top-1 right-[5px] hover:bg-white/5 ">
-            <Link href="../signup"> Sign up</Link>
+            <Link href="../signup"> {t("Sign up")}</Link>
           </AuthBtn>
         </BtnPar>
 
         <button className="absolute right-8 bg-black/60 text-center w-8.5 h-8 flex pt-1 justify-center text-md rounded-4xl  transition-transform duration-300 ease-in-out hover:rotate-90">
           <Link href="/">
-            <IoMdClose className="text-xl pt-1" />
+            <IoMdClose className="text-xl text-white pt-1" />
           </Link>
         </button>
         <h1 className="top-30 left-8 w-60 absolute font-bold text-2xl md:text-3xl md:w-full text-white">
-          Enter your account
+          {t("Enter your account")}
         </h1>
 
         <div className="mb-10 mt-42">
@@ -58,7 +62,7 @@ function Page() {
               <Input
                 onChange={handleChangeEmail}
                 value={email}
-                placeholder="Enter your email"
+                placeholder={t("Enter your email")}
               />
               <MdOutlineMail className="absolute w-5 top-[14px] left-1 md:left-5" />
             </div>
@@ -68,14 +72,14 @@ function Page() {
                 onChange={handleChangePassword}
                 value={password}
                 type="password"
-                placeholder="Enter your password"
+                placeholder={t("Enter your password")}
               />
               <GoLock className="absolute w-5 top-[14px] left-1 md:left-5" />
             </div>
           </form>
           <div className="text-center mt-10">
             <button className="bg-white/16 text-white w-45 h-12 md:w-85 rounded-2xl cursor-pointer hover:bg-white/25 duration-300 ease-in-out ">
-              Log in
+              {t("Log in")}
             </button>
           </div>
         </div>
