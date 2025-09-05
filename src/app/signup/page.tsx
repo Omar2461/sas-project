@@ -6,6 +6,7 @@ import Input from "@/components/Input";
 import AuthBtn from "@/components/AuthBtn";
 import Panel from "@/components/Panel";
 import BtnPar from "@/components/BtnPar";
+import LangBtn from "@/components/LangBtn";
 
 import { useSignupStore } from "@/store/signup.store";
 
@@ -43,7 +44,8 @@ function Page() {
 
   return (
     <div className="flex justify-center pt-20 min-h-screen bg-gradient-to-b from-sky-200 to-blue-500 ">
-      <Panel>
+      <LangBtn className="absolute right-10 top-10" />
+      <Panel className="w-90 md:w-100 md:h-150 max-sm:h-150">
         <BtnPar>
           <AuthBtn className="top-1 left-[5px] hover:bg-white/5 ">
             <Link href="../login">{t("Log in")}</Link>

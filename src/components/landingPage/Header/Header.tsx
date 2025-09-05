@@ -4,18 +4,18 @@ import NavItems from "./NavItems";
 
 import { useTranslation } from "react-i18next";
 
-import { MdLanguage } from "react-icons/md";
 import { CiMenuKebab } from "react-icons/ci";
 
 import SideBar from "../SideBar";
 import Button from "../Button";
+import LangBtn from "@/components/LangBtn";
 
 function Header() {
   const divEl = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -36,10 +36,6 @@ function Header() {
     };
   }, [isOpen]);
 
-  const handleLangClick = () => {
-    i18n.changeLanguage(i18n.language == "en" ? "ar" : "en");
-  };
-
   const handleMenueClick = () => {
     setIsOpen(true);
   };
@@ -54,10 +50,7 @@ function Header() {
 
       <NavItems />
       <div className="flex sm:gap-1 lg:gap-4 gap-2 text-[20px] lg:text-[20px] md:text-[17px] sm:text-[15px] sm:right-1 right-2 absolute sm:top-5 md:top-5 ">
-        <MdLanguage
-          className="mt-1 md:mr-1 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 "
-          onClick={handleLangClick}
-        />
+        <LangBtn />
 
         <Button className="bg-white hover:bg-gray-200  ">
           <Link href="./login">{t("Sign in")}</Link>
