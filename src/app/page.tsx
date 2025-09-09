@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./i18n";
 import Header from "@/components/landingPage/Header/Header";
 import Link from "next/link";
-import Panel from "@/components/Panel";
+import Panel from "@/components/shared/Panel";
 
 import { BiTransfer } from "react-icons/bi";
 import { FaWallet } from "react-icons/fa";

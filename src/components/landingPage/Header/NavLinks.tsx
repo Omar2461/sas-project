@@ -5,7 +5,7 @@ import NavLi from "./NavLi";
 function NavLinks() {
   const { t } = useTranslation();
   return (
-    <ul className="lg:flex md:flex lg:text-[17px] md:gap-3 lg:gap-6 md:pr-15  ">
+    <ol className="lg:flex md:flex lg:text-[17px] md:gap-3 lg:gap-6 md:pr-15 p-5  ">
       <Link href="./signup">
         <NavLi>{t("Home")}</NavLi>
       </Link>
@@ -21,7 +21,7 @@ function NavLinks() {
       <Link href="./signup">
         <NavLi>{t("Contact us")}</NavLi>
       </Link>
-    </ul>
+    </ol>
   );
 }
 

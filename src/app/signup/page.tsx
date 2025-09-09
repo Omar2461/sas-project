@@ -2,11 +2,11 @@
 
 import { useTranslation } from "react-i18next";
 
-import Input from "@/components/Input";
-import AuthBtn from "@/components/AuthBtn";
-import Panel from "@/components/Panel";
-import BtnPar from "@/components/BtnPar";
-import LangBtn from "@/components/LangBtn";
+import Input from "@/components/shared/Input";
+import AuthBtn from "@/components/shared/AuthBtn";
+import Panel from "@/components/shared/Panel";
+import BtnPar from "@/components/shared/BtnPar";
+import LangBtn from "@/components/shared/LangBtn";
 
 import { useSignupStore } from "@/store/signup.store";
 
@@ -68,6 +68,7 @@ function Page() {
           <form onSubmit={handleSubmit} className="w-full pl-10 pr-10 md:pt-5">
             <div className="relative mb-5">
               <Input
+                className="text-white"
                 onChange={handleChangeName}
                 value={name}
                 placeholder={t("Name")}
@@ -77,6 +78,7 @@ function Page() {
 
             <div className="relative mb-5">
               <Input
+                className="text-white"
                 onChange={handleChangeEmail}
                 value={email}
                 placeholder={t("Email")}
@@ -86,6 +88,7 @@ function Page() {
 
             <div className="relative">
               <Input
+                className="text-white"
                 onChange={handleChangePassword}
                 value={password}
                 type="password"

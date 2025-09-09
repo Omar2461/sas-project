@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
-import NavItems from "./NavItems";
 
 import { useTranslation } from "react-i18next";
 
 import { CiMenuKebab } from "react-icons/ci";
 
-import SideBar from "../SideBar";
+import SideBar from "../../shared/SideBar";
 import Button from "../Button";
-import LangBtn from "@/components/LangBtn";
+import LangBtn from "@/components/shared/LangBtn";
+import NavLinks from "./NavLinks";
+import NavItems from "./NavItems";
 
 function Header() {
   const divEl = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
@@ -42,7 +43,13 @@ function Header() {
 
   return (
     <div className="flex items-center justify-center py-5 w-full md:w-full relative md:top-2  ">
-      {isOpen ? <SideBar data-open={isOpen} ref={divEl} /> : ""}
+      {isOpen ? (
+        <SideBar data-open={isOpen} ref={divEl}>
+          <NavLinks />
+        </SideBar>
+      ) : (
+        ""
+      )}
       <CiMenuKebab
         onClick={handleMenueClick}
         className={`absolute  left-0 text-2xl lg:hidden md:hidden ${isOpen ? "hidden" : ""}`}
