@@ -1,9 +1,11 @@
+"use client";
+
 export default function TabContent() {
   return (
     <>
       <div id="default-styled-tab-content">
         <div
-          className="hidden p-4 rounded-lg"
+          className="p-4 rounded-lg"
           id="styled-profile"
           role="tabpanel"
           aria-labelledby="profile-tab"
@@ -16,6 +18,7 @@ export default function TabContent() {
                 className="object-cover rounded-t-lg h-full w-full md:rounded-none md:rounded-s-lg"
                 src="./file.svg"
                 alt=""
+                suppressHydrationWarning
               />
             </div>
             {/* <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="./file.svg" alt=""/> */}
@@ -37,6 +40,7 @@ export default function TabContent() {
                 className="object-cover rounded-t-lg h-full w-full md:rounded-none md:rounded-s-lg"
                 src="./file.svg"
                 alt=""
+                suppressHydrationWarning
               />
             </div>
             {/* <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="./file.svg" alt=""/> */}
