@@ -10,33 +10,44 @@ interface FileData {
 
 interface TableProps {
   data: FileData[];
+  th: string[];
+  className?: string;
 }
 
-function Table({ data }: TableProps) {
+function Table({ data, th, className }: TableProps) {
   return (
-    <Panel className=" bg-white border border-gray-300 rounded-xl p-3 mt-5">
+    <Panel
+      className={`bg-white border border-gray-300 rounded-xl p-3 mt-5 ${className?.includes("pointer-events-none") ? "pointer-events-none" : ""}`}
+    >
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="text-gray-500 text-sm border-b">
-              <th className="pb-2">{t("Name")}</th>
-              <th className="pb-2">{t("Owner")}</th>
-              <th className="pb-2">{t("Last Modified")}</th>
-              <th className="pb-2">{t("Size")}</th>
+              {th.map((el, idx) => (
+                <th key={idx} className="pb-2">
+                  {t(el)}
+                </th>
+              ))}
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {data.map((file, idx) => (
               <tr
                 key={idx}
-                className="border-b last:border-0 hover:bg-gray-50 transition"
+                className="border-b last:border-0 hover:bg-gray-50 transition "
               >
-                <td className="py-2 font-medium text-gray-900">{file.name}</td>
-                <td className="py-2 text-gray-600 cursor-pointer hover:underline">
+                <td className={`py-2 font-medium text-gray-900 ${className}`}>
+                  {file.name}
+                </td>
+                <td className={`py-2 text-gray-600 ${className}`}>
                   {file.owner}
                 </td>
-                <td className="py-2 text-gray-600">{file.date}</td>
-                <td className="py-2 text-gray-600">{file.size}</td>
+                <td className={`py-2 text-gray-600 ${className}`}>
+                  {file.date}
+                </td>
+                <td className={`py-2 text-gray-600 ${className}`}>
+                  {file.size}
+                </td>
               </tr>
             ))}
           </tbody>
