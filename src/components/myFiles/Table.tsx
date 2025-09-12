@@ -1,39 +1,18 @@
 import Panel from "@/components/shared/Panel";
 import { t } from "i18next";
 
-function QuickAccessTable() {
-  const data = [
-    {
-      name: "Project Proposal",
-      owner: "Liam Bennett",
-      date: "2023-08-15",
-      size: "2.5 MB",
-    },
-    {
-      name: "Meeting Notes",
-      owner: "Olivia Hayes",
-      date: "2023-08-14",
-      size: "1.2 MB",
-    },
-    {
-      name: "Client Contract",
-      owner: "Ethan Wong",
-      date: "2023-08-12",
-      size: "3.8 MB",
-    },
-    {
-      name: "Marketing Plan",
-      owner: "Sophia Clark",
-      date: "2023-08-10",
-      size: "4.1 MB",
-    },
-    {
-      name: "Financial Report",
-      owner: "Nathan Patel",
-      date: "2023-08-08",
-      size: "5.3 MB",
-    },
-  ];
+interface FileData {
+  name: string;
+  owner: string;
+  date: string;
+  size: string;
+}
+
+interface TableProps {
+  data: FileData[];
+}
+
+function Table({ data }: TableProps) {
   return (
     <Panel className=" bg-white border border-gray-300 rounded-xl p-3 mt-5">
       <div className="overflow-x-auto">
@@ -67,4 +46,4 @@ function QuickAccessTable() {
   );
 }
 
-export default QuickAccessTable;
+export default Table;

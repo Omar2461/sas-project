@@ -44,7 +44,11 @@ function Header() {
   return (
     <div className="flex items-center justify-center py-5 w-full md:w-full relative md:top-2  ">
       {isOpen ? (
-        <SideBar data-open={isOpen} ref={divEl}>
+        <SideBar
+          className="bg-black/60 text-white md:hidden lg:hidden"
+          data-open={isOpen}
+          ref={divEl}
+        >
           <NavLinks />
         </SideBar>
       ) : (

@@ -47,5 +47,13 @@
   "Trash": "المهملات",
   "Owner": "المالك",
   "Last Modified": "آخر تعديل",
-  "Size": "الحجم"
+  "Size": "الحجم",
+  "Upload new file": "رفع ملف جديد",
+  "File name": "اسم الملف",
+  "Enter file name": "أدخل اسم الملف",
+  "File type": "نوع الملف",
+  "Folder": "المجلد",
+  "Visibility": "الصلاحيات",
+  "Description": "الوصف",
+  "Enter file description": "أدخل وصف الملف"
 }
