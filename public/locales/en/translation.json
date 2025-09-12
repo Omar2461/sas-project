@@ -48,5 +48,13 @@
   "Trash": "Trash",
   "Owner": "Owner",
   "Last Modified": "Last Modified",
-  "Size": "Size"
+  "Size": "Size",
+  "Upload new file": "Upload new file",
+  "File name": "File name",
+  "Enter file name": "Enter file name",
+  "File type": "File type",
+  "Folder": "Folder",
+  "Visibility": "Visibility",
+  "Description": "Description",
+  "Enter file description": "Enter file description"
 }

@@ -21,7 +21,7 @@ const SideBar = forwardRef<HTMLDivElement, SideBarProps>(
       <div
         ref={ref}
         {...rest}
-        className={`fixed top-0 left-0 h-full w-64 z-50 flex bg-white text-blake pt-10
+        className={`fixed top-0 left-0 h-full w-64 z-50 flex pt-10
               transition-transform duration-500 ease-in-out ${className}
               ${dataOpen ? "translate-x-0" : "-translate-x-full"}`}
       >

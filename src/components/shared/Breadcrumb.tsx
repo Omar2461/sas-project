@@ -18,7 +18,7 @@ function Breadcrumb({ className }: { className?: string }) {
               {!isLast ? (
                 <Link
                   href={href}
-                  className="text-blue-500 hover:underline capitalize"
+                  className="text-gray-700 hover:underline capitalize"
                 >
                   {part}
                 </Link>

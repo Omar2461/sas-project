@@ -39,7 +39,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body className="min-h-screen bg-gray-50 text-gray-900">
         <SidebarContext.Provider value={{ isOpen, setIsOpen }}>
-          <SideBar data-open={isOpen} ref={divEl}>
+          <SideBar className="bg-white" data-open={isOpen} ref={divEl}>
             <SideBarElements />
           </SideBar>
           <CiMenuKebab

@@ -31,7 +31,7 @@ function SideBarElements() {
     },
     {
       name: "New",
-      href: "/myFiles/New",
+      href: "/myFiles/new",
       icon: <MdOutlineCreateNewFolder size={20} />,
     },
     {
@@ -47,7 +47,7 @@ function SideBarElements() {
 
     {
       name: "All Groups",
-      href: "/myFiles/All Groups",
+      href: "/myFiles/allGroups",
       icon: <MdOutlineGroups size={20} />,
     },
     {
