@@ -55,5 +55,9 @@
   "Folder": "المجلد",
   "Visibility": "الصلاحيات",
   "Description": "الوصف",
-  "Enter file description": "أدخل وصف الملف"
+  "Enter file description": "أدخل وصف الملف",
+  "name": "الاسم",
+  "owner": "المالك",
+  "date": "التاريخ",
+  "size": "الحجم"
 }

@@ -56,5 +56,9 @@
   "Folder": "Folder",
   "Visibility": "Visibility",
   "Description": "Description",
-  "Enter file description": "Enter file description"
+  "Enter file description": "Enter file description",
+  "name": "name",
+  "owner": "owner",
+  "date": "date",
+  "size": "size"
 }
