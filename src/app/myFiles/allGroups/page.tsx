@@ -2,7 +2,7 @@
 
 import Table from "@/components/myFiles/Table";
 import Breadcrumb from "@/components/shared/Breadcrumb";
-import { useSidebar } from "@/context/SidebarContext";
+import Container from "@/components/myFiles/Container";
 import { useTranslation } from "react-i18next";
 
 function Page() {
@@ -41,20 +41,15 @@ function Page() {
 
   const th = Object.keys(data[0]);
 
-  const { t, i18n } = useTranslation();
-  const { isOpen } = useSidebar();
-  const direction = i18n.language === "ar" ? "rtl" : "ltr";
+  const { t } = useTranslation();
   return (
-    <div
-      dir={direction}
-      className={`w-screen h-screen bg-white flex flex-col p-10 md:p-20 lg:p-20 ${isOpen ? "lg:pl-70 md:pl-70" : ""} xl:pl-80 xl:pr-80 transtion duration-400`}
-    >
+    <Container>
       <Breadcrumb />
       <h1 className=" text-xl font-bold lg:text-3xl lg:font-bold md:text-3xl md:font-bold transtion duration-400">
         {t("All Groups")}
       </h1>
       <Table className="pointer-events-none px-6 py-10 " data={data} th={th} />
-    </div>
+    </Container>
   );
 }
 

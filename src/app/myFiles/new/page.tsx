@@ -2,9 +2,10 @@
 
 import Dropdown from "@/components/myFiles/newPage/Dropdown";
 import Breadcrumb from "@/components/shared/Breadcrumb";
+import Container from "@/components/myFiles/Container";
 import Input from "@/components/shared/Input";
 import Panel from "@/components/shared/Panel";
-import { useSidebar } from "@/context/SidebarContext";
+
 import { useTranslation } from "react-i18next";
 
 function Page() {
@@ -19,15 +20,10 @@ function Page() {
     { name: "Public" },
     { name: "Restricted" },
   ];
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const { isOpen } = useSidebar();
-  const direction = i18n.language === "ar" ? "rtl" : "ltr";
   return (
-    <div
-      dir={direction}
-      className={`w-screen h-screen bg-white flex flex-col p-10 md:p-20 lg:p-20 ${isOpen ? "lg:pl-70 md:pl-70" : ""} xl:pl-80 xl:pr-80 transtion duration-400`}
-    >
+    <Container>
       <Breadcrumb />
       <h1 className=" text-xl font-bold lg:text-3xl lg:font-bold md:text-3xl md:font-bold transtion duration-400">
         {t("Upload new file")}
@@ -69,7 +65,7 @@ function Page() {
           </Panel>
         </div>
       </form>
-    </div>
+    </Container>
   );
 }
 
