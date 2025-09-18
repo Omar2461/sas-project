@@ -40,17 +40,17 @@ function Page() {
 
         <div className="flex flex-col gap-2">
           <label>{t("File type")}</label>
-          <Dropdown options={fileTypes} />
+          <Dropdown className="bg-gray-200" options={fileTypes} />
         </div>
 
         <div className="flex flex-col gap-2">
           <label>{t("Folder")}</label>
-          <Dropdown options={folders} />
+          <Dropdown className="bg-gray-200" options={folders} />
         </div>
 
         <div className="flex flex-col gap-2">
           <label>{t("Visibility")}</label>
-          <Dropdown options={visibility} />
+          <Dropdown className="bg-gray-200" options={visibility} />
         </div>
 
         <div className="flex flex-col gap-2">

@@ -18,7 +18,7 @@ interface DropdownProps {
 }
 
 function Dropdown({ options, className }: DropdownProps) {
-  const [Selected, isSelected] = useState("");
+  const [Selected, setSelected] = useState("");
   const [dropOpen, setDropOpen] = useState(false);
 
   const divEl = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
@@ -43,7 +43,7 @@ function Dropdown({ options, className }: DropdownProps) {
   }, [dropOpen]);
 
   const handleSelect = (title: string) => {
-    isSelected(title);
+    setSelected(title);
     setDropOpen(false);
   };
 
@@ -54,7 +54,7 @@ function Dropdown({ options, className }: DropdownProps) {
   const renderOptions = options.map(({ name }, idx) => (
     <li className="w-full" key={idx} onClick={() => handleSelect(name)}>
       <Panel
-        className={`bg-gray-200 text-black md:w-90 lg:w-90 rounded-xl p-3`}
+        className={`bg-white border border-gray-300 text-black md:w-90 lg:w-90 rounded-xl p-3`}
       >
         {name}
       </Panel>
@@ -63,11 +63,11 @@ function Dropdown({ options, className }: DropdownProps) {
   return (
     <div
       ref={divEl}
-      className={`flex flex-col w-full hover:scale-105 transtion duration-400 ease-in-out md:w-90 lg:w-90 ${className}`}
+      className={`bg-white flex flex-col w-full hover:scale-105 transtion duration-400 ease-in-out md:w-90 lg:w-90`}
     >
       <Panel
         onClick={handleDropdownClick}
-        className={`bg-gray-200 text-black md:w-90 lg:w-90 rounded-xl p-5 `}
+        className={`text-black md:w-90 lg:w-90 rounded-xl p-5 ${className} `}
       >
         {Selected}
 

@@ -7,6 +7,7 @@ import { MdOutlinePublishedWithChanges } from "react-icons/md";
 import { IoLayersOutline } from "react-icons/io5";
 import { MdOutlineGroups } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
+import { IoIosSettings } from "react-icons/io";
 
 import SidebarLink from "../shared/SidebarLink";
 import LangBtn from "../shared/LangBtn";
@@ -26,7 +27,7 @@ function SideBarElements() {
     },
     {
       name: "Project Proposal",
-      href: "/myFiles/Project Proposal",
+      href: "/myFiles/projectProposal",
       icon: <IoDocumentOutline size={20} />,
     },
     {
@@ -60,6 +61,11 @@ function SideBarElements() {
       href: "/myFiles/Trash",
       icon: <FaRegTrashAlt size={20} />,
     },
+    {
+      name: "Settings",
+      href: "/myFiles/settings",
+      icon: <IoIosSettings size={20} />,
+    },
   ];
 
   const { t } = useTranslation();
@@ -73,7 +79,7 @@ function SideBarElements() {
           </SidebarLink>
         ))}
 
-        <LangBtn className="ml-50 mt-60" />
+        <LangBtn className="ml-50 mt-5" />
       </nav>
     </div>
   );
