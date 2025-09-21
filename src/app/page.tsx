@@ -38,7 +38,7 @@ export default function Home() {
             "plays well in the ecosystem to protect what matters the most to you",
           )}
         </p>
-        <Button className="mt-5 bg-gradient-to-r from-sky-400 to-blue-500  text-black hover:opacity-80">
+        <Button className="mt-5 rounded-md bg-gradient-to-r from-sky-400 to-blue-500  text-black hover:opacity-80">
           <Link href="./signup">{t("Book a Demo")}</Link>
         </Button>
       </div>

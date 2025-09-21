@@ -1,6 +1,6 @@
 "use client";
 
-import Dropdown from "@/components/myFiles/newPage/Dropdown";
+import Dropdown from "@/components/myFiles/Dropdown";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import Container from "@/components/myFiles/Container";
 import Input from "@/components/shared/Input";
@@ -40,17 +40,17 @@ function Page() {
 
         <div className="flex flex-col gap-2">
           <label>{t("File type")}</label>
-          <Dropdown className="bg-gray-200" options={fileTypes} />
+          <Dropdown className="bg-gray-200 p-5" options={fileTypes} />
         </div>
 
         <div className="flex flex-col gap-2">
           <label>{t("Folder")}</label>
-          <Dropdown className="bg-gray-200" options={folders} />
+          <Dropdown className="bg-gray-200 p-5" options={folders} />
         </div>
 
         <div className="flex flex-col gap-2">
           <label>{t("Visibility")}</label>
-          <Dropdown className="bg-gray-200" options={visibility} />
+          <Dropdown className="bg-gray-200 p-5" options={visibility} />
         </div>
 
         <div className="flex flex-col gap-2">

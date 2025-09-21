@@ -8,6 +8,7 @@ import { IoLayersOutline } from "react-icons/io5";
 import { MdOutlineGroups } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
+import { MdOutlineHelpCenter } from "react-icons/md";
 
 import SidebarLink from "../shared/SidebarLink";
 import LangBtn from "../shared/LangBtn";
@@ -55,6 +56,11 @@ function SideBarElements() {
       name: "Version History",
       href: "/myFiles/Version History",
       icon: <FaHistory size={20} />,
+    },
+    {
+      name: "Help",
+      href: "/myFiles/help",
+      icon: <MdOutlineHelpCenter size={20} />,
     },
     {
       name: "Trash",

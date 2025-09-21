@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import i18n from "@/app/i18n";
+import { useTranslation } from "react-i18next";
 
 interface DropdownOption {
   name: string;
@@ -15,13 +15,26 @@ interface DropdownOption {
 interface DropdownProps {
   options: DropdownOption[];
   className?: string;
+  defaultValue?: string;
+  shouldHandleClick?: boolean;
 }
 
-function Dropdown({ options, className }: DropdownProps) {
-  const [Selected, setSelected] = useState("");
+function Dropdown({
+  options,
+  className,
+  defaultValue,
+  shouldHandleClick = true,
+}: DropdownProps) {
+  const [Selected, setSelected] = useState(defaultValue ?? "");
   const [dropOpen, setDropOpen] = useState(false);
 
+  const { t, i18n } = useTranslation();
+
   const divEl = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+
+  useEffect(() => {
+    setSelected(t(defaultValue ?? ""));
+  }, [defaultValue, i18n.language, t]);
 
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -51,12 +64,20 @@ function Dropdown({ options, className }: DropdownProps) {
     setDropOpen((prev) => !prev);
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLLIElement>, name: string) => {
+    if (!shouldHandleClick) {
+      e.stopPropagation();
+      return;
+    }
+    handleSelect(name);
+  };
+
   const renderOptions = options.map(({ name }, idx) => (
-    <li className="w-full" key={idx} onClick={() => handleSelect(name)}>
+    <li className="w-full" key={idx} onClick={(e) => handleClick(e, name)}>
       <Panel
         className={`bg-white border border-gray-300 text-black md:w-90 lg:w-90 rounded-xl p-3`}
       >
-        {name}
+        {t(name)}
       </Panel>
     </li>
   ));
@@ -67,7 +88,7 @@ function Dropdown({ options, className }: DropdownProps) {
     >
       <Panel
         onClick={handleDropdownClick}
-        className={`text-black md:w-90 lg:w-90 rounded-xl p-5 ${className} `}
+        className={`text-black rounded-xl ${className} `}
       >
         {Selected}
 

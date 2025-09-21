@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 
 import { IoIosCloseCircle } from "react-icons/io";
 import Input from "@/components/shared/Input";
-import Dropdown from "@/components/myFiles/newPage/Dropdown";
+import Dropdown from "@/components/myFiles/Dropdown";
 
 function Page() {
   const pageElem = [
