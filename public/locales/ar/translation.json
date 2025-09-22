@@ -104,5 +104,6 @@
   "Deleted files are moved to the Trash/Recycle Bin and can be restored within 30 days.": "يتم نقل الملفات المحذوفة إلى سلة المهملات/سلة المحذوفات ويمكن استعادتها خلال 30 يومًا.",
   "Go to Trash, find your file, and click Restore.": "اذهب إلى سلة المهملات، ابحث عن ملفك، ثم انقر على استعادة.",
   "Files permanently deleted after 30 days cannot be recovered.": "لا يمكن استعادة الملفات التي تم حذفها نهائيًا بعد 30 يومًا.",
-  "Help": "مساعدة"
+  "Help": "مساعدة",
+  "View and manage previous versions of this document": "عرض وإدارة الإصدارات السابقة من هذا المستند"
 }

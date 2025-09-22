@@ -54,7 +54,7 @@ function SideBarElements() {
     },
     {
       name: "Version History",
-      href: "/myFiles/Version History",
+      href: "/myFiles/version_history",
       icon: <FaHistory size={20} />,
     },
     {

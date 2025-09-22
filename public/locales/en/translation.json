@@ -105,5 +105,6 @@
   "Deleted files are moved to the Trash/Recycle Bin and can be restored within 30 days.": "Deleted files are moved to the Trash/Recycle Bin and can be restored within 30 days.",
   "Go to Trash, find your file, and click Restore.": "Go to Trash, find your file, and click Restore.",
   "Files permanently deleted after 30 days cannot be recovered.": "Files permanently deleted after 30 days cannot be recovered.",
-  "Help": "Help"
+  "Help": "Help",
+  "View and manage previous versions of this document": "View and manage previous versions of this document"
 }

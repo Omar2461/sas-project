@@ -1,15 +1,11 @@
 import Panel from "@/components/shared/Panel";
 import { t } from "i18next";
+import { ReactNode } from "react";
 
-interface FileData {
-  name: string;
-  owner: string;
-  date: string;
-  size: string;
-}
+type TableCell = string | number | boolean | null | ReactNode;
 
 interface TableProps {
-  data: FileData[];
+  data: Record<string, TableCell>[];
   th: string[];
   className?: string;
 }
@@ -30,26 +26,26 @@ function Table({ data, th, className }: TableProps) {
               ))}
             </tr>
           </thead>
-          <tbody className="">
-            {data.map((file, idx) => (
-              <tr
-                key={idx}
-                className="border-b last:border-0 hover:bg-gray-50 transition "
-              >
-                <td className={`py-2 font-medium text-gray-900 ${className}`}>
-                  {file.name}
-                </td>
-                <td className={`py-2 text-gray-600 ${className}`}>
-                  {file.owner}
-                </td>
-                <td className={`py-2 text-gray-600 ${className}`}>
-                  {file.date}
-                </td>
-                <td className={`py-2 text-gray-600 ${className}`}>
-                  {file.size}
-                </td>
-              </tr>
-            ))}
+          <tbody>
+            {data.map((file, idx) => {
+              return (
+                <tr
+                  key={idx}
+                  className="border-b last:border-0 hover:bg-gray-50 transition"
+                >
+                  {th.map((header) => {
+                    return (
+                      <td
+                        key={header}
+                        className={`py-2 font-medium text-gray-900 ${className}`}
+                      >
+                        {file[header]}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
