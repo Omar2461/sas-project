@@ -1,3 +1,7 @@
+"use client";
+
+import "flowbite";
+
 function NavLi({
   children,
   className,

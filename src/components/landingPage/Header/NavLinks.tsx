@@ -1,3 +1,7 @@
+"use client";
+
+import "flowbite";
+
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import NavLi from "./NavLi";
