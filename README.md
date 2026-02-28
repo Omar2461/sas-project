@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 sas-project
 
-## Getting Started
+## 📌 Project Overview  
+A modern and responsive frontend web application built using Next.js and TypeScript. The project focuses on clean UI/UX design, multilingual support (English / Arabic), and scalable structure following best practices.
 
-First, run the development server:
+The application starts with a landing page, where users can navigate to Sign In or Sign Up pages. Authentication flow is prepared on the frontend, and protected routing logic is planned for future backend integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Currently, access to internal pages (e.g., `/myfiles`) can be done manually via URL, as backend authentication is not yet connected.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ⚡ Built with Next.js (App Router)
+- 🔥 TypeScript for type safety
+- 🎨 Styled using Tailwind CSS
+- 📱 Fully responsive (Mobile, Tablet, Desktop)
+- 🌍 Internationalization (i18n)
+  - English ↔ Arabic language switching
+  - RTL/LTR layout support
+- 🏠 Landing page as entry point
+- 🔐 Authentication UI (Frontend only)
+- 📂 Internal page structure (e.g., `/myfiles` route)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js  
+- TypeScript  
+- Tailwind CSS  
+- i18n  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📌 Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Backend authentication integration
+- Route protection (Private Routes / Middleware)
+- API connection for dynamic data
