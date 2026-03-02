@@ -48,7 +48,6 @@ Currently, access to internal pages (e.g., `/myfiles`) can be done manually via 
 
 ### 📝 Sign Up
 ![Sign Up](public/screenshots/sign_up.png)
-![Sign Up](public/screenshots/sign_up_mobile.png)
 
 ### 📂 My Files Page
 ![My Files](public/screenshots/my_files_1.png)
@@ -59,7 +58,6 @@ Currently, access to internal pages (e.g., `/myfiles`) can be done manually via 
 ### 🌍 Arabic Version (RTL)
 ![Arabic Version](public/screenshots/arabic/Landing_page_1.png)
 ![Arabic Version](public/screenshots/arabic/Landing_page_3.png)
-![Arabic Version](public/screenshots/arabic/Landing_page_4.png)
 ![Arabic Version](public/screenshots/arabic/landing_page_mobile_2.png)
 ![Arabic Version](public/screenshots/arabic/my_files_1.png)
 ![Arabic Version](public/screenshots/arabic/my_files_mobile_1.png)
