@@ -9,59 +9,6 @@ Currently, access to internal pages (e.g., `/myfiles`) can be done manually via 
 
 ---
 
-
-## 📸 Screenshots
-
-### 🏠 Landing Page
-![Landing Page](public/screenshots/Landing_page_1.png)
-![Landing Page](public/screenshots/Landing_page_2.png)
-![Landing Page](public/screenshots/landing_page_mobile_1.png)
-![Landing Page](public/screenshots/landing_page_mobile_2.png)
-
-
-
-### 🔐 Sign In
-![Sign In](public/screenshots/sign_in.png)
-![Sign In](public/screenshots/sign_in_mobile.png)
-
-### 📝 Sign Up
-![Sign Up](public/screenshots/sign_up.png)
-![Sign Up](public/screenshots/sign_up_mobile.png)
-
-### 📂 My Files Page
-![My Files](public/screenshots/my_files_1.png)
-![My Files](public/screenshots/my_files_2.png)
-![My Files](public/screenshots/my_files_3.png)
-![My Files](public/screenshots/my_files_4.png)
-![My Files](public/screenshots/my_files_5.png)
-![My Files](public/screenshots/my_files_6.png)
-![My Files](public/screenshots/my_files_8.png)
-![My Files](public/screenshots/my_files_mobile_1.png)
-![My Files](public/screenshots/my_files_mobile_2.png)
-![My Files](public/screenshots/my_files_mobile_3.png)
-![My Files](public/screenshots/my_files_mobile_4.png)
-![My Files](public/screenshots/my_files_mobile_5.png)
-![My Files](public/screenshots/my_files_mobile_6.png)
-
-### 🌍 Arabic Version (RTL)
-![Arabic Version](public/screenshots/arabic/Landing_page_1.png)
-![Arabic Version](public/screenshots/arabic/Landing_page_2.png)
-![Arabic Version](public/screenshots/arabic/Landing_page_3.png)
-![Arabic Version](public/screenshots/arabic/Landing_page_4.png)
-![Arabic Version](public/screenshots/arabic/landing_page_mobile_1.png)
-![Arabic Version](public/screenshots/arabic/landing_page_mobile_2.png)
-![Arabic Version](public/screenshots/arabic/my_files_1.png)
-![Arabic Version](public/screenshots/arabic/my_files_2.png)
-![Arabic Version](public/screenshots/arabic/my_files_3.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_1.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_2.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_3.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_4.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_5.png)
-![Arabic Version](public/screenshots/arabic/my_files_mobile_6.png)
-![Arabic Version](public/screenshots/arabic/sign_in_mobile.png)
-![Arabic Version](public/screenshots/arabic/sign_up_mobile.png)
-
 ## ✨ Features
 
 - ⚡ Built with Next.js (App Router)
@@ -86,8 +33,43 @@ Currently, access to internal pages (e.g., `/myfiles`) can be done manually via 
 
 ---
 
+
+## 📸 Screenshots
+
+### 🏠 Landing Page
+![Landing Page](public/screenshots/Landing_page_1.png)
+![Landing Page](public/screenshots/landing_page_mobile_2.png)
+
+
+
+### 🔐 Sign In
+![Sign In](public/screenshots/sign_in.png)
+![Sign In](public/screenshots/sign_in_mobile.png)
+
+### 📝 Sign Up
+![Sign Up](public/screenshots/sign_up.png)
+![Sign Up](public/screenshots/sign_up_mobile.png)
+
+### 📂 My Files Page
+![My Files](public/screenshots/my_files_1.png)
+![My Files](public/screenshots/my_files_4.png)
+![My Files](public/screenshots/my_files_mobile_1.png)
+![My Files](public/screenshots/my_files_mobile_2.png)
+
+### 🌍 Arabic Version (RTL)
+![Arabic Version](public/screenshots/arabic/Landing_page_1.png)
+![Arabic Version](public/screenshots/arabic/Landing_page_3.png)
+![Arabic Version](public/screenshots/arabic/Landing_page_4.png)
+![Arabic Version](public/screenshots/arabic/landing_page_mobile_2.png)
+![Arabic Version](public/screenshots/arabic/my_files_1.png)
+![Arabic Version](public/screenshots/arabic/my_files_mobile_1.png)
+![Arabic Version](public/screenshots/arabic/my_files_mobile_2.png)
+
+---
+
 ## 📌 Future Improvements
 
 - Backend authentication integration
 - Route protection (Private Routes / Middleware)
 - API connection for dynamic data
+  
